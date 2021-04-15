@@ -3,8 +3,20 @@ package collections
 class Filter {
 }
 val nos= listOf<Int>(1,2,-3,4,-5,-7,-9)
+val words= listOf<String>("first","element","of","the","list","last")
 fun main()
 {
+    val first=words.find { it.startsWith("f") }
+    println(first)
+    val last=words.find { it.startsWith("l") }
+    println(last)
+    val firstNo=nos.first()
+    val lastNo=nos.last()
+    println("first of no is =$firstNo, last of no is =$lastNo")
+    val firstEvenNo=nos.first { it%2==0 }
+    println(firstEvenNo)
+    val lastEvenNo=nos.first { it%2==0 }
+    println(lastEvenNo)
     val positives=nos.filter { x -> x>0 }
     //val positives=nos.filter { it >0 }
 
